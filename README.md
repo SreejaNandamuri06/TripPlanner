@@ -166,15 +166,4 @@ Example:
 * 📅 AI-based Trip Recommendations
 
 ---
-
-## 👩‍💻 Author
-
-### Sreeja Nandamuri
-
-* GitHub: [https://github.com/SreejaNandamuri06](https://github.com/SreejaNandamuri06)
-
----
-
-## ⭐ Support
-
 If you like this project, consider giving it a ⭐ on GitHub.
