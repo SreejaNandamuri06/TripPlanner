@@ -1,20 +1,20 @@
 # 🌍 TripPlanner
 
-A modern full-stack travel planning web application built using the MERN stack. TripPlanner helps users create and manage trips, explore destinations, handle bookings, and organize travel plans through an interactive and user-friendly interface.
+A modern full-stack travel planning web application built using the **MERN Stack**. TripPlanner helps users create and manage trips, explore destinations, handle bookings, and organize travel plans through an interactive and user-friendly interface.
 
 ---
 
 ## ✨ Features
 
-* 🔐 User Authentication (Login & Registration)
-* 🧳 Create and Manage Trips
-* 📍 Destination Exploration
-* 📅 Trip Planning Dashboard
-* 🎟 Booking Management
-* 👤 User Profiles
-* 🛠 Admin Dashboard
-* 📱 Responsive Modern UI
-* ☁️ MongoDB Database Integration
+- 🔐 User Authentication (Login & Registration)
+- 🧳 Create and Manage Trips
+- 📍 Destination Exploration
+- 📅 Trip Planning Dashboard
+- 🎟 Booking Management
+- 👤 User Profiles
+- 🛠 Admin Dashboard
+- 📱 Responsive Modern UI
+- ☁️ MongoDB Database Integration
 
 ---
 
@@ -22,19 +22,19 @@ A modern full-stack travel planning web application built using the MERN stack. 
 
 ### Frontend
 
-* React.js
-* Vite
-* React Router
-* Axios
-* CSS / Modern UI Design
+- React.js
+- Vite
+- React Router
+- Axios
+- CSS / Modern UI Design
 
 ### Backend
 
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* JWT Authentication
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
 
 ---
 
@@ -142,27 +142,40 @@ http://localhost:5001/api
 
 ---
 
+## 🌐 Live Deployment
+
+### 🚀 Frontend (Vercel)
+
+[TripPlanner Frontend](https://trip-planner-pi-rouge.vercel.app)
+
+### ⚙️ Backend (Render)
+
+[TripPlanner Backend API](https://tripplanner-af5q.onrender.com)
+
+---
+
 ## 📸 Screenshots
 
 Add your application screenshots here.
 
 Example:
 
-* Home Page
-* Login Page
-* Dashboard
-* Trip Creation Page
-* Booking Section
+- Home Page
+- Login Page
+- Dashboard
+- Trip Creation Page
+- Booking Section
 
 ---
 
 ## 🔮 Future Improvements
 
-* 🌐 Google Maps Integration
-* ☁️ Weather Forecast API
-* 💳 Payment Gateway
-* 🤝 Trip Sharing
-* 📍 Live Location Tracking
-* 📅 AI-based Trip Recommendations
+- 🌐 Google Maps Integration
+- ☁️ Weather Forecast API
+- 💳 Payment Gateway
+- 🤝 Trip Sharing
+- 📍 Live Location Tracking
+- 📅 AI-based Trip Recommendations
 
 ---
+
