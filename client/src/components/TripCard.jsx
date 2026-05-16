@@ -3,14 +3,6 @@ import { MapPin, Calendar, Edit2, Trash2, ArrowRight, Users, IndianRupee } from 
 import { toast } from "sonner";
 import api from "../services/api";
 
-const IMAGES = [
-  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-  "https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=800&q=80",
-  "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80",
-  "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
-  "https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=800&q=80",
-  "https://images.unsplash.com/photo-1488085061387-422e29b40080?w=800&q=80",
-];
 
 const fmt = (d) =>
   new Date(d).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
@@ -22,8 +14,14 @@ const fmtINR = (n) =>
     maximumFractionDigits: 0,
   }).format(n || 0);
 
-export default function TripCard({ trip, index = 0, onEdit, onDelete }) {
-  const image = IMAGES[index % IMAGES.length];
+export default function TripCard({ trip, onEdit, onDelete, destinations = [] }) {
+  // Find matching destination to get the authentic image
+  const destMatch = destinations.find(d => 
+    d.destinationName.toLowerCase().includes(trip.destination.toLowerCase()) || 
+    trip.destination.toLowerCase().includes(d.destinationName.toLowerCase())
+  );
+  
+  const image = trip.imageUrl || destMatch?.imageUrl || null;
 
   const handleDelete = async () => {
     if (!window.confirm(`Delete "${trip.tripName}"? This cannot be undone.`)) return;
@@ -39,10 +37,14 @@ export default function TripCard({ trip, index = 0, onEdit, onDelete }) {
   return (
     <div className="group relative rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-black/40 h-72">
       {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-        style={{ backgroundImage: `url(${image})` }}
-      />
+      {image ? (
+        <div
+          className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-teal-900 transition-transform duration-500 group-hover:scale-110" />
+      )}
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/10" />
 
       {/* Action buttons top-right */}
